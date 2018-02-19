@@ -1,24 +1,13 @@
-# README
+# obfuscname
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+As an input takes a seed (old name?)
 
-Things you may want to cover:
+As an output produces a new name (always the same for a given seed)
 
-* Ruby version
+``obfuscname $ curl localhost:3000/JohnDoe
+  {"seed":"JohnDoe","name":"Gage Jacinto"}``
 
-* System dependencies
+If no input given - takes current time as a seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+``obfuscname $ curl localhost:3000/
+  {"seed":"2018-02-12T15:45:00+03:00","name":"Eleanore Liliana"}``
